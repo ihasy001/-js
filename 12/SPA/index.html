@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    
+        html, body, .box {
+            width: 100%;
+            height: 100%;
+        }
+    
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .box > .top {
+            height: 130px;
+            background-color: skyblue;
+            font-size:50px;
+            line-height:130px;
+            text-align: center;
+        }
+    
+        .box > .bottom {
+            flex: 1;
+            display: flex;
+        }
+    
+        .box > .bottom > .slide {
+            width: 230px;
+            background-color: orange;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+    
+        .box > .bottom > .slide > a {
+            font-size: 30px;
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #333;
+        }
+    
+        .box > .bottom > .content {
+            flex: 1;
+            box-sizing: border-box;
+            padding: 15px;
+            background-color: pink;
+        
+            font-size: 100px;
+            color: #fff;
+        }
+      </style>
+</head>
+<body>
+    <div class="box">
+        <div class="top">顶部通栏</div>
+        <div class="bottom">
+            <div class="slide">
+                <a href="#/first">first</a>
+                <a href="#/second">second</a>
+                <a href="#/third">third</a>
+                <a href="#/fourth">fourth</a>
+            </div>
+            <div class="content router-view">
+                <!-- 路由出口标签, 将来切换路由的时候, 所有显示的结构都插入到这个标签内部 -->
+            </div>
+        </div>
+      </div>
+
+      <script src="./index.js" type="module"></script>
+</body>
+</html>
